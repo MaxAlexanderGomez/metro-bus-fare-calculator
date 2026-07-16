@@ -1,0 +1,41 @@
+# Max_Gomez
+
+# This function adds the number of passengers from all three buses
+# and returns the total.
+def addpeople(m, n, b):
+    totalpeople = m + n + b
+    return totalpeople
+
+
+# This function receives the total number of passengers,
+# multiplies it by $2.50, and returns the total fare.
+def calculatefare(totalpeople):
+    fare = totalpeople * 2.50
+    return fare
+
+
+# This function receives the total fare,
+# deducts 50% for operating costs, and returns the net profit.
+def calculatenet(fare):
+    netprofit = fare / 2
+    return netprofit
+
+
+# Main body: ask the user for the passengers on each bus
+d1m = int(input("Please enter the number of passengers for bus1 :\n"))
+d2m = int(input("Please enter the number of passengers for bus2 :\n"))
+d3m = int(input("Please enter the number of passengers for bus3 :\n"))
+
+print("***********")
+
+# Send the data to the different functions
+totalpassengers = addpeople(d1m, d2m, d3m)
+farecollected = calculatefare(totalpassengers)
+totalnet = calculatenet(farecollected)
+
+# Display the results
+print("There are total " + str(totalpassengers) +
+      " passengers from three buses.")
+print("The total fare earned is: $" + str(farecollected))
+print("The net profit is: $" + str(totalnet))
+print("***********")
